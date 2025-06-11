@@ -2,15 +2,17 @@
 
 ## Objective
 
-To analyse marketing performance and customer sentiment for an online sports ecommerce store. The aim was to identify why conversion rates dropped, evaluate engagement trends, and extract sentiment insights from customer product reviews to support data-driven decisions.
+This project involved an end-to-end data-driven analysis for an online sports retailer facing declining customer engagement and conversion rates. I analysed the dataset, including customer feedback, to identify key trends and insights. By combining marketing analytics with sentiment analysis, I provided actionable recommendations to optimise marketing strategies, enhance the customer experience, and improve overall business performance.
 
 ---
 
 ## Data Overview
 
-- **Source**: `.bak` SQL Server backup file (from GitHub)
-- **Content**: Customer transactions, website visits, product info, and customer reviews
-- **Structure**: Galaxy schema with multiple fact tables connected to shared dimensions
+- **Source:** SQL Server backup file (`.bak`) obtained from GitHub  
+- **Content:** Comprehensive dataset comprising customer details, product information, user engagement metrics, product interaction records, and customer reviews 
+- **Details:** Dataset includes customer demographics, product attributes, conversions, clicks, views, likes, engagement duration, drop-offs, conversions, and customer review texts intended for sentiment analysis  
+- **Schema:** Galaxy schema architecture with multiple fact tables representing user engagement, product details, customer information, and review data  
+
 
 ---
 
@@ -20,20 +22,21 @@ To analyse marketing performance and customer sentiment for an online sports eco
 
 - Restored the `.bak` file in **SQL Server**
 - Performed data cleaning, joins, and formatting using SQL scripts
-- Created a **Calendar Table** for time-based analysis
 
 ### Sentiment Analysis (Python)
 
 - Used `TextBlob` to analyse customer reviews
 - Generated:
-  - Sentiment Categories: Positive, Negative, Neutral, Mixed
+  - Sentiment Categories: Positive, Negative, Neutral
   - Sentiment Scores (based on polarity)
-- Exported results to `.csv` for Power BI integration
+- Exported results to `.xlsx` for Power BI integration
 
 ### Data Modelling & Visualisation (Power BI)
 
+- Connected the .bak SQL Server backup file directly to Power BI via SQL Server connection and applied data cleaning within Power BI using SQL queries.
 - Imported processed data into **Power BI**
 - Performed hybrid cleaning using Power Query
+- Created a **Calendar Table** for time-based analysis
 - Defined KPIs with **DAX**:
   - Conversion Rate
   - Sentiment Score
@@ -77,7 +80,7 @@ To analyse marketing performance and customer sentiment for an online sports eco
 
 | Tool/Language   | Usage                              |
 |----------------|-------------------------------------|
-| SQL Server      | Data wrangling, joins |
+| SQL Server      | Restored .bak file, Data wrangling, joins |
 | Python (TextBlob) | Sentiment analysis of reviews     |
 | Power BI        | Data modelling, DAX, dashboarding   |
 | Excel           | Data export/import                 |
